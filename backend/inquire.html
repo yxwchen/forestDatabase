@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阿里山林業鐵路文化資產資料庫-管理端</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../assets/scss/all.css">
+    <!-- ico -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div class="adminWrap">
+        <!-- 左側Nav -->
+        <div class="leftNav">
+            <a href="#">
+                <img src="../assets/images/adminLogo.png" alt="">
+            </a>
+            <h5 class="mt-4">綜合查詢</h5>
+            <a href="./inquire.html" class="leftNavLink active">進階查詢與匯出</a>
+            <h5>數位資源管理</h5>
+            <a href="./dataList.html" class="leftNavLink">資料增修</a>
+            <h5>審核管理</h5>
+            <ul>
+                <li><a href="./reviewList.html" class="leftNavLink">資料審查</a></li>
+                <li><a href="./frontwebList.html" class="leftNavLink">前台開放</a></li>
+            </ul>
+            <h5>資料管理</h5>
+            <ul>
+                <li><a href="./synonym.html" class="leftNavLink">同義字管理</a></li>
+                <li><a href="./authority.html" class="leftNavLink">權威檔管理</a></li>
+                <li><a href="./topic.html" class="leftNavLink">主題管理</a></li>
+                <li><a href="./grade.html" class="leftNavLink">分級管理</a></li>
+                <li><a href="./statistics.html" class="leftNavLink">統計分析</a></li>
+            </ul>
+            <h5>系統管理</h5>
+            <a href="./accountList.html" class="leftNavLink">帳號管理</a>
+            <h5>前台管理</h5>
+            <a href="./frontwebManage.html" class="leftNavLink">前台資料管理</a>
+        </div>
+        <!-- /.左側Nav -->
+        <!-- 右區塊 -->
+        <main class="contnetWrap">
+            <!-- 標題-->
+            <div>
+                <!-- 1109add -->
+                <h4 class="pageTitle">
+                    <span class="material-icons md-48 hideBtn">
+                        chevron_left
+                    </span><span class="material-icons md-48 showBtn d-none">
+                        chevron_right
+                    </span>
+                    進階查詢與匯出</h4>
+            </div>
+            <!--/. 標題-->
+            <!-- 主要內容 -->
+            <div class="px-4">
+                <!-- 上方按鈕搜尋功能區 -->
+                <div class="functionBtnWrap">
+                    <!-- tab -->
+                    <!-- <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                                type="button" role="tab" aria-controls="home" aria-selected="true">一般搜尋</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="profile-tab" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal" type="button">進階搜尋</button>
+                        </li>
+                    </ul> -->
+                    <!--/. tab -->
+                    <!-- tab content -->
+                    <div class="tab-content pt-4" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <form class="row g-3 pb-3">
+                                <div class="col-md-2">
+                                    <select id="inputState" class="form-select">
+                                        <option selected>分級</option>
+                                        <option value="">特級藏品</option>
+                                        <option value="">一級藏品</option>
+                                        <option value="">二級藏品</option>
+                                        <option value="">其他</option>
+
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <select id="inputState" class="form-select">
+                                        <option selected>主題</option>
+                                        <option value="">自然資源</option>
+                                        <option value="">林業發展</option>
+                                        <option value="">人文記憶</option>
+                                        <option value="">聚落生活</option>
+                                        <option value="">鐵道技術</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <select id="inputState" class="form-select">
+                                        <option selected>類型</option>
+                                        <option value="">人文</option>
+                                        <option value="">器物</option>
+                                        <option value="">文獻</option>
+                                        <option value="">位置場域</option>
+                                        <option value="">影音</option>
+                                        <option value="">無形文化資產</option>
+                                        <option value="">自然景觀</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <input type="search" class="form-control rounded"
+                                            placeholder="請輸入關鍵字，多組關鍵字以逗號分隔" aria-label="Search"
+                                            aria-describedby="search-addon" />
+                                        <button type="button" class="btn btn-outline-primary">搜尋</button>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-12">
+                                </div> -->
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Modal-進階搜尋 -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog wMax960">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">進階搜尋</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="row g-3 pb-3">
+                                            <div class="col-md-2">
+                                                <select id="inputState" class="form-select">
+                                                    <option selected>分級</option>
+                                                    <option value="">特級藏品</option>
+                                                    <option value="">一級藏品</option>
+                                                    <option value="">二級藏品</option>
+                                                    <option value="">其他</option>
+
+                                                </select>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <select id="inputState" class="form-select">
+                                                    <option selected>主題</option>
+                                                    <option value="">自然資源</option>
+                                                    <option value="">林業發展</option>
+                                                    <option value="">人文記憶</option>
+                                                    <option value="">聚落生活</option>
+                                                    <option value="">鐵道技術</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <select id="inputState" class="form-select">
+                                                    <option selected>類型</option>
+                                                    <option value="">人文</option>
+                                                    <option value="">器物</option>
+                                                    <option value="">文獻</option>
+                                                    <option value="">位置場域</option>
+                                                    <option value="">影音</option>
+                                                    <option value="">無形文化資產</option>
+                                                    <option value="">自然景觀</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-group">
+                                                    <input type="search" class="form-control rounded"
+                                                        placeholder="請輸入關鍵字，多組關鍵字以逗號分隔" aria-label="Search"
+                                                        aria-describedby="search-addon" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row g-3 pb-3">
+                                            <div class="col-md-6">
+                                                <p>撰寫者</p>
+                                                <input type="text" class="form-control" placeholder="請輸入撰寫者">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>著作權規範</p>
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option selected>請選擇</option>
+                                                    <!-- <option value="1">全部授權</option> -->
+                                                    <option value="1">CC授權 姓名標示 3.0 (CC-BY)</option>
+                                                    <option value="2">CC授權 姓名標示-相同方式分享(CC-BY-SA)</option>
+                                                    <option value="3">CC授權 姓名標示-非商業性(CC BY-NC )</option>
+                                                    <option value="4">CC授權 姓名標示-非商業性 -同方式分享（CC BY-NC -SA）</option>
+                                                    <option value="5">CC授權 姓名標示-禁止改作3.0 (CC BY-ND )</option>
+                                                    <option value="6">CC授權 姓名標示-非商業性-禁止改作 (CC BY-NC-ND )</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row g-3 pb-3">
+                                            <div class="col-md-6">
+                                                <p>時間資訊</p>
+                                                <input type="text" class="form-control" placeholder="請輸入時間資訊">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>地點資訊</p>
+                                                <input type="text" class="form-control" placeholder="請輸入地點資訊">
+                                            </div>
+                                        </div>
+                                        <div class="row g-3 pb-3">
+                                            <div class="col-md-6">
+                                                <p>數位資源貢獻者</p>
+                                                <input type="text" class="form-control" placeholder="請輸入數位資源貢獻者">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>詮釋資料貢獻者</p>
+                                                <input type="text" class="form-control" placeholder="請輸入詮釋資料貢獻者">
+                                            </div>
+                                        </div>
+                                        <div class="row g-3 pb-3">
+                                            <div class="col-md-6">
+                                                <p>材質</p>
+                                                <input type="text" class="form-control" placeholder="請輸入材質">
+                                            </div>
+                                        </div>
+                                    </form>
+
+
+
+
+
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                                    <button type="button" class="btn btn-primary">搜尋</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal-資料匯出 -->
+                    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">資料匯出</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    您選擇的資料已下載到您的本機端。
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">關閉</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/. tab content -->
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p>資料查詢結果：全部顯示</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal2">
+                            資料匯出
+                        </button>
+                    </div>
+                </div>
+                <!--/. 上方按鈕搜尋功能區 -->
+                <!-- 表格 -->
+                <div class="my-4">
+                    <table class="table bg-white shadow table-striped">
+                        <thead>
+                            <tr class="tableHeader">
+                                <th scope="col" class="w120"><input type="checkbox" class="form-check-input">選取</th>
+                                <th scope="col">圖片</th>
+                                <th scope="col">名稱</th>
+                                <th scope="col">主題與類型</th>
+                                <th scope="col">分級</th>
+                                <th scope="col" style="width: 80px;">詳細內容</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="verticalAlignMiddle">
+                                <td scope="row"><input type="checkbox" class="form-check-input"></td>
+                                <td><img class="w120 h80"
+                                        src="https://p4.itc.cn/images01/20210410/7856db6ce6c249c49024be1a5bdbbae2.png"
+                                        alt=""></td>
+                                <td>孫中山</td>
+                                <td>
+                                    <p>人文記憶</p>
+                                    <p class="text-muted">人文</p>
+                                </td>
+                                <td>
+                                    一級藏品
+                                </td>
+                                <td class="text-center">
+                                    <a href="./viewData01_inquire.html">
+                                        <span class="material-icons">
+                                            visibility
+                                        </span></a></td>
+                            </tr>
+                            <tr class="verticalAlignMiddle">
+                                <td scope="row"><input type="checkbox" class="form-check-input"></td>
+                                <td><img class="w120 h80" src="https://pic.pimg.tw/weng3309/1552177503-640257110.jpg"
+                                        alt=""></td>
+                                <td>轉車台</td>
+                                <td>
+                                    <p>鐵道技術</p>
+                                    <p class="text-muted">器物</p>
+                                </td>
+                                <td>
+                                    特級藏品
+                                </td>
+                                <td class="text-center">
+                                    <a href="#">
+                                        <span class="material-icons">
+                                            visibility
+                                        </span></a></td>
+                            </tr>
+                            <tr class="verticalAlignMiddle">
+                                <td scope="row"><input type="checkbox" class="form-check-input"></td>
+                                <td><img class="w120 h80"
+                                        src="https://www.th.gov.tw/epaper/uploads/epaper/y11w32/15xiwbyv.jpg" alt="">
+                                </td>
+                                <td>昭和8年臺南州祠廟名鑑</td>
+                                <td>
+                                    <p>人文記憶</p>
+                                    <p class="text-muted">文獻</p>
+                                </td>
+                                <td>
+                                    一級藏品</td>
+                                <td class="text-center">
+                                    <a href="#">
+                                        <span class="material-icons">
+                                            visibility
+                                        </span></a></td>
+                            </tr>
+                            <tr class="verticalAlignMiddle">
+                                <td scope="row"><input type="checkbox" class="form-check-input"></td>
+                                <td><img class="w120 h80"
+                                        src="https://i-fun-travel.com/wp-content/uploads/2020/04/7.png" alt=""></td>
+                                <td>阿里山神木群</td>
+                                <td>
+                                    <p>自然資源</p>
+                                    <p class="text-muted">位置場域</p>
+                                </td>
+                                <td>
+                                    特級藏品</td>
+                                <td class="text-center">
+                                    <a href="#">
+                                        <span class="material-icons">
+                                            visibility
+                                        </span></a></td>
+                            </tr>
+                            <tr class="verticalAlignMiddle">
+                                <td scope="row"><input type="checkbox" class="form-check-input"></td>
+                                <td><img class="w120 h80"
+                                        src="https://threeonelee.com/wp-content/uploads/20210120011857_60.jpg" alt="">
+                                </td>
+                                <td>阿里山櫻花</td>
+                                <td>
+                                    <p>林業發展</p>
+                                    <p class="text-muted">影音</p>
+                                </td>
+                                <td>
+                                    二級藏品</td>
+                                <td class="text-center">
+                                    <a href="#">
+                                        <span class="material-icons">
+                                            visibility
+                                        </span></a></td>
+                            </tr>
+                            <tr class="verticalAlignMiddle">
+                                <td scope="row"><input type="checkbox" class="form-check-input"></td>
+                                <td><img class="w120 h80" src="http://alishan.cyc.edu.tw/1996/images/map-5.gif" alt="">
+                                </td>
+                                <td>阿里山十字村口述史</td>
+                                <td>
+                                    <p>人文記憶</p>
+                                    <p class="text-muted">無形文化資產</p>
+                                </td>
+                                <td>
+                                    二級藏品</td>
+                                <td class="text-center">
+                                    <a href="#">
+                                        <span class="material-icons">
+                                            visibility
+                                        </span></a></td>
+                            </tr>
+                            <tr class="verticalAlignMiddle">
+                                <td scope="row"><input type="checkbox" class="form-check-input"></td>
+                                <td><img class="w120 h80" src="https://www.ali-nsa.net/zh-tw/image/5861/1024x768"
+                                        alt=""></td>
+                                <td>雲潭瀑布</td>
+                                <td>
+                                    <p>自然資源</p>
+                                    <p class="text-muted">自然景觀</p>
+                                </td>
+                                <td>
+                                    一級藏品</td>
+                                <td class="text-center">
+                                    <a href="#">
+                                        <span class="material-icons">
+                                            visibility
+                                        </span></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--/. 表格 -->
+                <!-- pagination -->
+                <div class="mt-4">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination d-flex justify-content-center">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!--/. pagination -->
+            </div>
+            <!--/. 主要內容 -->
+        </main>
+        <!-- /.右區塊 -->
+    </div>
+
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+</body>
+<!-- 1109add -->
+<script>
+    let elHideBtn = document.querySelector('.hideBtn');
+    elHideBtn.addEventListener('click', function () {
+        document.querySelector('.leftNav').classList.add('d-none');
+        document.querySelector('.contnetWrap').classList.add('ms0');
+        elHideBtn.classList.add('d-none');
+        document.querySelector('.showBtn').classList.remove('d-none');
+        console.log("ccc")
+    });
+    let elShowBtn = document.querySelector('.showBtn');
+    elShowBtn.addEventListener('click', function () {
+        document.querySelector('.leftNav').classList.remove('d-none');
+        document.querySelector('.contnetWrap').classList.remove('ms0');
+        elHideBtn.classList.remove('d-none');
+        elShowBtn.classList.add('d-none');
+        console.log('aaa')
+    });
+</script>
+
+</html>

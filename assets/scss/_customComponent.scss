@@ -1,0 +1,233 @@
+//*************首頁大圖banner**************
+// .banner {
+//     height: 500px;
+//     background-image: url(https://afrch.forest.gov.tw/Attachments/ArticleBanner/13/202106/2021060915314056069.jpg);
+//     background-position: center;
+//     background-size: cover;
+//     background-color: rgba(0, 0, 0, .4);
+//     background-blend-mode: multiply;
+// }
+// 首頁大圖改輪播
+.bannerHeight {
+    height: 500px;
+
+    @include mobile {
+        height: 250px;
+    }
+}
+
+.searchFormWrap {
+    padding: 20px;
+    position: absolute;
+    top: 35%;
+    left: 25%;
+    width: 50%;
+    z-index: 10;
+    border-radius: 0.125rem;
+
+    @include mobile {
+        top: 10%;
+        left: 10%;
+        width: 80%;
+        padding: 10px;
+    }
+}
+
+//**************首頁  搜尋樣式******************
+//搜尋圓弧形白背景樣式
+.searchForm {
+    display: flex;
+
+    input {
+        border: none;
+        border-radius: 30px 0px 0px 30px;
+        width: 100%;
+        padding: 10px;
+    }
+
+    botton {
+        background-color: $white;
+        border-radius: 0 30px 30px 0;
+        padding: 10px;
+        cursor: pointer;
+    }
+}
+
+//***************owl卡片樣式***************
+//圖片設高 避免跑版
+.cardImgHeight {
+    height: 20vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+//設owl箭頭位置與大小顏色
+.owl-prev {
+    left: -50px;
+}
+
+.owl-next {
+    right: -50px;
+}
+
+.owl-prev,
+.owl-next {
+    position: absolute;
+    top: 90px;
+}
+
+.owl-prev span,
+.owl-next span {
+    font-size: 60px;
+    color: black;
+}
+
+.owl-theme,
+.owl-nav[class*="owl-"]:hover {
+    background: transparent;
+}
+
+//首頁gallery區塊 owl元件不顯示btn
+.owlGallery>.owl-nav>.owl-prev span,
+.owlGallery>.owl-nav>.owl-next span {
+    color: $white;
+    font-size: 1px;
+}
+
+//****************改寫tab樣式***************
+.nav-tabs .nav-link {
+    margin-bottom: -1px;
+    border: 1px solid transparent;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+    color: #495057;
+    background-color: #dee2e6;
+    border-bottom: 1px solid #ccc;
+    color: white;
+    background-color: $primary;
+}
+
+//**************卡片設計*****************
+.dataPicture {
+    border: none;
+
+    img {
+        width: 100%;
+        height: 255px;
+        object-position: center;
+        object-fit: cover;
+    }
+
+    .card-title {
+        min-height: 72px;
+    }
+
+    .card-body {
+        min-height: 120px;
+    }
+}
+
+
+//************分類搜尋的列表模式設計**********
+.listBox {
+    display: flex;
+    height: auto;
+    align-items: center;
+    padding: 4px;
+    margin: 16px 0;
+}
+
+.listBoxflexGrow1 {
+    flex: 1;
+}
+
+.listBoxflexGrow2 {
+    flex: 2;
+
+    img {
+        width: 100%;
+    }
+}
+
+.listBoxflexGrow3 {
+    flex: 3;
+
+    @include mobile {
+        display: none;
+    }
+}
+
+//*********分類搜尋的搜尋checkbox重設樣式 html的input元件設d-none**********
+
+.label {
+    display: inline-block;
+    padding: 4px 8px;
+    margin-right: 4px;
+    margin-top: 2px;
+    color: $primary;
+    background-color: $gray-100;
+    border-radius: 0.5rem;
+
+    &:hover {
+        color: darken($primary, 10%);
+        background-color: $gray-200;
+        cursor: pointer;
+    }
+}
+
+input[type=checkbox]:checked+.label {
+    background: $primary;
+    color: #fff;
+}
+
+//*********分類搜尋的搜尋radio重設樣式 html的input元件設d-none**********
+
+input[type=radio]+span {
+    display: inline-block;
+    padding: 4px 8px;
+    margin-right: 4px;
+    margin-top: 2px;
+    color: $primary;
+    background-color: $gray-100;
+    border-radius: 0.5rem;
+
+    &:hover {
+        color: darken($primary, 10%);
+        background-color: $gray-200;
+        cursor: pointer;
+    }
+}
+
+input:checked+span {
+    background: $primary;
+    color: #fff;
+}
+
+// 首頁新增三欄
+.index3ItemsWrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: $gray-200;
+    // &:hover{
+    //     background-color: #fcc;
+    // }
+}
+
+.index3Items {
+
+    &:hover {
+        background-color: $forestSecond;
+    }
+}
+
+// .index3ItemsWrap .index3Items span{
+//     font-size: $h4;
+//     color:$dark;
+// }
+
+

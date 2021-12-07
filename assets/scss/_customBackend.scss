@@ -1,0 +1,182 @@
+// *****************後台用的scss***************
+
+.adminWrap {
+    background-color: #f6f6f6;
+}
+
+.leftNav {
+    width: 260px;
+    height: 100vh;
+    background: $white;
+    position: fixed;
+    top: 0;
+    z-index: 4;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+
+    h5 {
+        margin-top: 20px;
+        padding-left: 20px;
+        font-size: 18px;
+        font-weight: $font-weight-normal;
+        color: #A2ABB0;
+    }
+}
+
+.leftNavLink {
+    width: 100%;
+    display: block;
+    padding: 8px 0;
+    padding-left: 40px;
+    transition: 0.5s;
+
+    &:hover {
+        background-color: $primary;
+        color: $white;
+    }
+}
+
+.leftNavLink.active {
+    background-color: #f4f4f4;
+    color: $primary;
+    border-right: 8px solid $primary;
+    padding-right: 32px;
+}
+
+.contnetWrap {
+    margin-left: 260px;
+    min-height: 100vh;
+
+}
+
+.pageTitle {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    padding: 0 20px;
+    height: 60px;
+    line-height: 60px;
+    width: 100%;
+    background-color: $white;
+    color: $primary;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.functionBtnWrap {
+    margin-top: 60px;
+    padding-top: 20px;
+}
+
+// 新增資料
+.dataTitle {
+    // background: #f9f9f9;
+    padding: 8px;
+    min-width: 150px;
+}
+
+.dataInput {
+    // background: #faa;
+    min-width: 700px;
+    padding: 8px;
+}
+
+//資料增修-類別按鈕設計
+.typeBtn {
+    border-left: 4px solid $primary;
+    border-radius: 0px 15px 15px 0px;
+    background: $white;
+    transition: background-color .5s;
+
+    &:hover {
+        background: $primary;
+        color: $white;
+    }
+}
+
+//********登入頁面設計**********
+.loginWrap {
+    background-color: #BDDAD5;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centerPanel {
+    width: 800px;
+    height: 600px;
+    display: flex;
+
+    .inputArea {
+        width: 50%;
+        padding: 28px 32px 0 32px;
+        background: $white;
+    }
+
+    .pictureArea {
+        width: 50%;
+        background-image: url("https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+}
+
+//*********統計分析頁面***********
+
+.widthHalfWrap {
+    width: 50%;
+    padding: 8px;
+}
+
+.checkboxTitle {
+    background: $white;
+    padding: 0.375rem 1.75rem 0.375rem 0.5rem;
+    border: 1px solid #CED4DA;
+    border-radius: 5px;
+}
+
+//統計圖表高度
+.h400 {
+    height: 400px;
+}
+
+//*********後台表格的header設計*************
+.tableHeader {
+    --bs-table-bg: #1EAE98;
+    --bs-table-striped-bg: #c8e3de;
+    --bs-table-striped-color: #000;
+    --bs-table-active-bg: #bdd7d3;
+    --bs-table-active-color: #000;
+    --bs-table-hover-bg: #c2ddd8;
+    --bs-table-hover-color: #000;
+    color: #fff;
+    border-color: #bdd7d3;
+}
+
+// 1109add
+.pageTitle .hideBtn,
+.pageTitle .showBtn {
+    line-height: 58px;
+    transition: all .5s ease;
+
+    &:hover {
+        cursor: pointer;
+        color: darken($primary, 10%);
+    }
+}
+
+//縮小清單要加的通用元素
+.ms0 {
+    margin-left: 0;
+}
+// .pageTitle .hideBtn{
+//      display: none;
+// }
+// 平板手機顯示箭頭
+// @media screen and (max-width: 769px) {
+//     .pageTitle .hideBtn {
+//         display: inline-block;
+//     }
+// }

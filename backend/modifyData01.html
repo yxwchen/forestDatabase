@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阿里山林業鐵路文化資產資料庫-管理端</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../assets/scss/all.css">
+    <!-- ico -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div class="adminWrap">
+        <!-- 左側Nav -->
+        <div class="leftNav">
+            <a href="#">
+                <img src="../assets/images/adminLogo.png" alt="">
+            </a>
+            <h5 class="mt-4">綜合查詢</h5>
+            <a href="./inquire.html" class="leftNavLink">進階查詢與匯出</a>
+            <h5>數位資源管理</h5>
+            <a href="./dataList.html" class="leftNavLink active">資料增修</a>
+            <h5>審核管理</h5>
+            <ul>
+                <li><a href="./reviewList.html" class="leftNavLink">資料審查</a></li>
+                <li><a href="./frontwebList.html" class="leftNavLink">前台開放</a></li>
+            </ul>
+            <h5>資料管理</h5>
+            <ul>
+                <li><a href="./synonym.html" class="leftNavLink">同義字管理</a></li>
+                <li><a href="./authority.html" class="leftNavLink">權威檔管理</a></li>
+                <li><a href="./topic.html" class="leftNavLink">主題管理</a></li>
+                <li><a href="./grade.html" class="leftNavLink">分級管理</a></li>
+                <li><a href="./statistics.html" class="leftNavLink">統計分析</a></li>
+            </ul>
+            <h5>系統管理</h5>
+            <a href="./accountList.html" class="leftNavLink">帳號管理</a>
+            <h5>前台管理</h5>
+            <a href="./frontwebManage.html" class="leftNavLink">前台資料管理</a>
+        </div>
+        <!-- /.左側Nav -->
+        <!-- 右區塊 -->
+        <main class="contnetWrap">
+            <!-- 標題 -->
+            <div>
+                <h4 class="pageTitle">資料增修<span class="h6 d-inline-block ps-4">修改一筆</span></h4>
+            </div>
+            <!--/. 標題 -->
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">顯示其他欄位</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">原系統編碼</label>
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput2" class="form-label">資料來源</label>
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput2" class="form-label">參考資料(關連)</label>
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput2" class="form-label">別名</label>
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput2" class="form-label">備註</label>
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput2" class="form-label">語言</label>
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput2" class="form-label">資料格式</label>
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput2" class="form-label">出生地-地址</label>
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput2" class="form-label">通訊地址</label>
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput2" class="form-label">緯度</label>
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput2" class="form-label">經度</label>
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput2" class="form-label">相關資源</label>
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput2" class="form-label">專長</label>
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput2" class="form-label">e-mail</label>
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput2" class="form-label">個人網址</label>
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput2" class="form-label">職稱</label>
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput2" class="form-label">工作單位</label>
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput2" class="form-label">電話</label>
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                            <button type="button" class="btn btn-primary">儲存</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 主要內容 -->
+            <div class="px-4">
+                <!-- 上方按鈕搜尋功能區 -->
+                <div class="functionBtnWrap d-flex justify-content-between align-items-center">
+                    <a href="./dataList.html">回列表頁</a>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        顯示其他欄位
+                    </button>
+                </div>
+                <!--/. 上方按鈕搜尋功能區 -->
+                <!-- 表單 -->
+                <div class="container w960">
+                    <form action="">
+                        <div class="d-flex">
+                            <div class="dataTitle">類型</div>
+                            <div class="dataInput fw-bolder">
+                                人文
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="dataTitle">主題</div>
+                            <div class="dataInput">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option>請選擇</option>
+                                    <option value="1">自然資源</option>
+                                    <option value="2">林業發展</option>
+                                    <option value="3" selected>人文記憶</option>
+                                    <option value="3">聚落生活</option>
+                                    <option value="3">鐵道技術</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="dataTitle">分級</div>
+                            <div class="dataInput">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option>請選擇</option>
+                                    <option value="1">特級藏品</option>
+                                    <option value="2" selected>一級藏品</option>
+                                    <option value="3">二級藏品</option>
+                                    <option value="3">其他</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- <div class="d-flex align-items-center">
+                            <div class="dataTitle">識別碼</div>
+                            <div class="dataInput">
+                                <input type="text" class="form-control" placeholder="請輸入識別碼">
+                            </div>
+                        </div> -->
+                        <div class="d-flex align-items-center">
+                            <div class="dataTitle">代表圖像</div>
+                            <div class="dataInput">
+                                <img class="w120 h80"
+                                    src="https://p4.itc.cn/images01/20210410/7856db6ce6c249c49024be1a5bdbbae2.png"
+                                    alt="">
+                                <input class="form-control" type="file" id="formFile">
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="dataTitle">永久保存檔</div>
+                            <div class="dataInput">
+                                <p>../00001.pdf</p>
+                                <input class="form-control" type="file" id="formFile">
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="dataTitle">姓名</div>
+                            <div class="dataInput">
+                                <input type="text" value="孫中山" class="form-control">
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="dataTitle">性別</div>
+                            <div class="dataInput">
+                                <input type="text" value="男" class="form-control">
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="dataTitle">撰寫者</div>
+                            <div class="dataInput">
+                                <input type="text" value="李伯新" class="form-control">
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="dataTitle">關鍵字</div>
+                            <div class="dataInput">
+                                <input type="text" value="國父,革命,大總統" class="form-control">
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="dataTitle">介紹</div>
+                            <div class="dataInput">
+                                <textarea class="form-control h130">
+孫中山（1866年11月12日－1925年3月12日），名文，後化名中山樵，生於大清廣東省香山縣，長於翠亨村、檀香山和英屬香港，是中國政治家，以革命推行民主與政治經濟等現代制度的先驅，對中國歷史影響深遠。中華民國政府尊其為「國父」，中國共產黨尊其為「中國偉大的革命先行者」。
+                                </textarea>
+
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="dataTitle">數位資源貢獻者</div>
+                            <div class="dataInput">
+                                <input type="text" value="近代中國出版社" class="form-control">
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="dataTitle">詮釋資料貢獻者</div>
+                            <div class="dataInput">
+                                <input type="text" value="近代中國出版社" class="form-control">
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="dataTitle">著作權規範</div>
+                            <div class="dataInput">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option>請選擇</option>
+                                    <!-- <option value="1">全部授權</option> -->
+                                    <option value="1" selected>CC授權 姓名標示 3.0 (CC-BY)</option>
+                                    <option value="2">CC授權 姓名標示-相同方式分享(CC-BY-SA)</option>
+                                    <option value="3">CC授權 姓名標示-非商業性(CC BY-NC )</option>
+                                    <option value="4">CC授權 姓名標示-非商業性 -同方式分享（CC BY-NC -SA）</option>
+                                    <option value="5">CC授權 姓名標示-禁止改作3.0 (CC BY-ND )</option>
+                                    <option value="6">CC授權 姓名標示-非商業性-禁止改作 (CC BY-NC-ND )</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="dataTitle">生日</div>
+                            <div class="dataInput">
+                                <input type="text" value="1866-11-12" class="form-control">
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="dataTitle">出生地-名稱</div>
+                            <div class="dataInput">
+                                <input type="text" value="廣東省香山縣" class="form-control">
+                            </div>
+                        </div>
+                        <div class=" d-flex justify-content-center my-4">
+                            <a href="./dataList.html" class="btn btn-outline-primary me-md-2">回列表頁</a>
+                            <button class="btn btn-primary" type="button">修改一筆</button>
+                        </div>
+                    </form>
+                </div>
+                <!--/. 表單 -->
+            </div>
+            <!--/. 主要內容 -->
+        </main>
+        <!-- /.右區塊 -->
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+</body>
+
+
+</html>

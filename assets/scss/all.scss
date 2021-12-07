@@ -1,0 +1,10 @@
+
+@import "customVariable";//自訂變數
+@import "./bootstrap/bootstrap.scss"; //bs5 scss
+@import "./customMixin";//全站mixin
+@import "./customSite"; // 全站設定
+@import"./customComponent";//元件類
+@import"./customUtilities";//通用樣式
+@import"./customBackend";//後台樣式
+
+@import"./customCarousel";//大圖輪播樣式沒吃到bs，測試單獨拉出來寫

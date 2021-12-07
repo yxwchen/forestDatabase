@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阿里山林業鐵路文化資產資料庫-管理端</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../assets/scss/all.css">
+    <!-- ico -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div class="adminWrap">
+        <!-- 左側Nav -->
+        <div class="leftNav">
+            <a href="#">
+                <img src="../assets/images/adminLogo.png" alt="">
+            </a>
+            <h5 class="mt-4">綜合查詢</h5>
+            <a href="./inquire.html" class="leftNavLink">進階查詢與匯出</a>
+            <h5>數位資源管理</h5>
+            <a href="./dataList.html" class="leftNavLink">資料增修</a>
+            <h5>審核管理</h5>
+            <ul>
+                <li><a href="./reviewList.html" class="leftNavLink">資料審查</a></li>
+                <li><a href="./frontwebList.html" class="leftNavLink">前台開放</a></li>
+            </ul>
+            <h5>資料管理</h5>
+            <ul>
+                <li><a href="./synonym.html" class="leftNavLink ">同義字管理</a></li>
+                <li><a href="./authority.html" class="leftNavLink">權威檔管理</a></li>
+                <li><a href="./topic.html" class="leftNavLink ">主題管理</a></li>
+                <li><a href="./grade.html" class="leftNavLink active">分級管理</a></li>
+                <li><a href="./statistics.html" class="leftNavLink">統計分析</a></li>
+            </ul>
+            <h5>系統管理</h5>
+            <a href="./accountList.html" class="leftNavLink">帳號管理</a>
+            <h5>前台管理</h5>
+            <a href="./frontwebManage.html" class="leftNavLink">前台資料管理</a>
+        </div>
+        <!-- /.左側Nav -->
+        <!-- 右區塊 -->
+        <main class="contnetWrap">
+            <!-- 標題-->
+            <div>
+                <h4 class="pageTitle">分級管理</h4>
+            </div>
+            <!--/. 標題-->
+            <!-- 主要內容 -->
+            <div class="px-4">
+                <!-- 上方按鈕搜尋功能區 -->
+                <div class="functionBtnWrap">
+                    <a href="./addGrade.html" class="btn btn-primary" role="button">新增一筆</a>
+                </div>
+                <!--/. 上方按鈕搜尋功能區 -->
+                <!-- 表格 -->
+                <div class="mt-4">
+                    <table class="table bg-white shadow table-striped">
+                        <thead>
+                            <tr class="tableHeader">
+                                <th scope="col">名稱</th>
+                                <th scope="col">敘述</th>
+                                <th scope="col" style="width: 50px;">修改</th>
+                                <th scope="col" style="width: 50px;">刪除</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">特級藏品</td>
+                                <td>經中央主管機關審查指定為具國寶、重要古物者，或其他具有重要文化等</td>
+                                <td>
+                                    <a href="#"><span class="material-icons">
+                                            edit
+                                        </span></a></td>
+                                <td>
+                                    <a href="#">
+                                        <span class="material-icons">
+                                            delete
+                                        </span></a></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">一級藏品</td>
+                                <td>經本館典藏管理審議會審定為具一般古物價值者</td>
+                                <td>
+                                    <a href="#"><span class="material-icons">
+                                            edit
+                                        </span></a></td>
+                                <td>
+                                    <a href="#">
+                                        <span class="material-icons">
+                                            delete
+                                        </span></a></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">二級藏品</td>
+                                <td>前（一）（二）項外，經單位審定為永久典藏之典藏品</td>
+                                <td>
+                                    <a href="#"><span class="material-icons">
+                                            edit
+                                        </span></a></td>
+                                <td>
+                                    <a href="#">
+                                        <span class="material-icons">
+                                            delete
+                                        </span></a></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">其他</td>
+                                <td>前（一）（二）（三）項外，初步評估具有蒐藏價值者品</td>
+                                <td>
+                                    <a href="#"><span class="material-icons">
+                                            edit
+                                        </span></a></td>
+                                <td>
+                                    <a href="#">
+                                        <span class="material-icons">
+                                            delete
+                                        </span></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--/. 表格 -->
+            </div>
+            <!--/. 主要內容 -->
+        </main>
+        <!-- /.右區塊 -->
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+</body>
+
+
+</html>

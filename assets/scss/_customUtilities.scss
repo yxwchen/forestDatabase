@@ -1,0 +1,162 @@
+// **********寬高設定*************
+// 圖片固定高
+.h300 {
+    height: 300px;
+}
+.h130{
+    height: 130px;
+}
+.h80{
+    height: 80px;
+}
+.minHeight250{
+    min-height: 250px; 
+}
+.w120{
+    width: 120px;
+}
+
+.w200 {
+    width: 200px;
+}
+.w960{
+    width: 960px;
+}
+.wMax960{
+    max-width: 960px;
+}
+/*網站地圖頁最小高度撐到滿版*/
+.contentHeight {
+    min-height: calc(100vh - 13.7em);
+}
+//分類檢索固定寬度
+.widthFixedMD{
+    width: 120px;
+}
+
+//*************顏色設定***********
+.textForest {
+    color: $forestColor;
+}
+
+.textForestTip {
+    color: $forestColorTip;
+}
+
+.textForestSecond {
+    color: $forestSecond;
+}
+.textAdminTip{
+    color: $adminTip;
+}
+.textAdminInfo{
+    color: $adminInfo;
+}
+.bgForest {
+    background-color: $forestColor;
+}
+.bgForestThird {
+    background-color: $forestSecond;
+}
+
+
+// ***********文字尺寸與行高************
+/*font size*/
+.fontsizeSm {
+    font-size: $font-size-sm;
+}
+.lineheight2 {
+    line-height: 2;
+}
+
+
+
+// **********置中與間距***********
+/*圖片設定置中(分類檢索Item)*/
+.center {
+    margin: 0 auto;
+    float: none;
+}
+//垂直置中
+.verticalAlignMiddle{
+    vertical-align: middle;
+}
+// 間距
+.mb05 {
+    margin-bottom: 0.5rem;
+}
+
+
+
+// ************連結樣式**************
+/*網站地圖頁 連結的區塊樣式*/
+.blockLink {
+    display: block;
+    background-color: $primary;
+    color: $white;
+    text-align: center;
+    padding: 16px;
+    margin: 8px;
+    transition: background-color .5s;
+    &:hover{
+        background-color: darken($primary, 10%);
+        color: $white;
+    }
+}
+
+// a連結白色有線(首頁熱門關鍵連結用)
+.whitelinkLine {
+    color: $white;
+    text-decoration: underline;
+    transition: 0.5s;
+
+    &:hover {
+        color: $primary;
+        text-decoration: underline;
+    }
+}
+
+//連結樣式 card 特色主題
+.topicLink {
+    color:$dark;
+    &:hover{
+        color: $forestColor;
+    }
+    h5{
+        color:$primary;   
+        &:hover{
+            color: $forestColor;
+        }
+    }
+
+}
+// .topicLink {
+//     color:#FCC;
+//     .card-body{
+//         color: $black;
+//         transition: 0.5s;
+//         &:hover {
+//             color: $white;
+//             background-color: $primary;
+//         }
+//     }
+// }
+//首頁 tag樣式
+.lineTags {
+    border: 1px solid $primary;
+    display: inline-block;
+    padding: 2px 8px;
+    margin: 2px 4px;
+    border-radius: 15px;
+    &:hover {
+        color: $white;
+        background-color: $primary;
+    }
+}
+
+//連結有線樣式
+.aUnderline{
+    text-decoration: underline !important;
+}
+
+

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阿里山林業鐵路文化資產資料庫-管理端</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../assets/scss/all.css">
+    <!-- ico -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div class="adminWrap">
+        <!-- 左側Nav -->
+        <div class="leftNav">
+            <a href="#">
+                <img src="../assets/images/adminLogo.png" alt="">
+            </a>
+            <h5 class="mt-4">綜合查詢</h5>
+            <a href="./inquire.html" class="leftNavLink">進階查詢與匯出</a>
+            <h5>數位資源管理</h5>
+            <a href="./dataList.html" class="leftNavLink">資料增修</a>
+            <h5>審核管理</h5>
+            <ul>
+                <li><a href="./reviewList.html" class="leftNavLink">資料審查</a></li>
+                <li><a href="./frontwebList.html" class="leftNavLink active">前台開放</a></li>
+            </ul>
+            <h5>資料管理</h5>
+            <ul>
+                <li><a href="./synonym.html" class="leftNavLink ">同義字管理</a></li>
+                <li><a href="./authority.html" class="leftNavLink">權威檔管理</a></li>
+                <li><a href="./topic.html" class="leftNavLink">主題管理</a></li>
+                <li><a href="./grade.html" class="leftNavLink">分級管理</a></li>
+                <li><a href="./statistics.html" class="leftNavLink">統計分析</a></li>
+            </ul>
+            <h5>系統管理</h5>
+            <a href="./accountList.html" class="leftNavLink">帳號管理</a>
+            <h5>前台管理</h5>
+            <a href="./frontwebManage.html" class="leftNavLink">前台資料管理</a>
+        </div>
+        <!-- /.左側Nav -->
+        <!-- 右區塊 -->
+        <main class="contnetWrap">
+            <!-- 標題 -->
+            <div>
+                <h4 class="pageTitle">前台開放</h4>
+            </div>
+            <!--/. 標題 -->
+            <!-- 主要內容 -->
+            <div class="px-4">
+                <!-- 上方按鈕搜尋功能區 -->
+                <div class="functionBtnWrap">
+                    <form class="row g-3 pb-3">
+                        <div class="col-md-2">
+                            <select id="inputState" class="form-select">
+                                <option selected>狀態</option>
+                                <option value="">開放</option>
+                                <option value="">未開放</option>
+                            </select>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="input-group">
+                                <input type="search" class="form-control rounded" placeholder="請輸入關鍵字，多組關鍵字以逗號分隔"
+                                    aria-label="Search" aria-describedby="search-addon" />
+                                <button type="button" class="btn btn-outline-primary">搜尋</button>
+                            </div>
+                        </div>
+                        <!-- <div class="col-12">
+                        </div> -->
+                    </form>
+                    <div class="d-flex justify-content-end">
+                        <a href="./frontwebList2.html" class="btn btn-primary" role="button">修改狀態</a>
+                    </div>
+                </div>
+                <!--/. 上方按鈕搜尋功能區 -->
+                <!-- 表格 -->
+                <div class="my-4">
+                    <table class="table bg-white shadow table-striped">
+                        <thead>
+                            <tr class="tableHeader">
+                                <th scope="col">狀態</th>
+                                <th scope="col">圖片</th>
+                                <th scope="col">名稱</th>
+                                <th scope="col">主題與類型</th>
+                                <th scope="col" style="width: 80px;">詳細內容</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="verticalAlignMiddle">
+                                <td scope="row" class="text-success">開放</td>
+                                <td><img class="w120 h80"
+                                        src="https://p4.itc.cn/images01/20210410/7856db6ce6c249c49024be1a5bdbbae2.png"
+                                        alt=""></td>
+                                <td>孫中山</td>
+                                <td>
+                                    <p>人文記憶</p>
+                                    <p class="text-muted">人文</p>
+                                </td>
+                                <td class="text-center">
+                                    <a href="./viewData01_frontweb.html"><span class="material-icons">
+                                            visibility
+                                        </span></a></td>
+                            </tr>
+                            <tr class="verticalAlignMiddle">
+                                <td scope="row" class="text-danger">未開放</td>
+                                <td><img class="w120 h80" src="https://pic.pimg.tw/weng3309/1552177503-640257110.jpg"
+                                        alt=""></td>
+                                <td>轉車台</td>
+                                <td>
+                                    <p>鐵道技術</p>
+                                    <p class="text-muted">器物</p>
+                                </td>
+                                <td class="text-center">
+                                    <a href="#"><span class="material-icons">
+                                            visibility
+                                        </span></a></td>
+                            </tr>
+                            <tr class="verticalAlignMiddle">
+                                <td scope="row" class="text-success">開放 </td>
+                                <td><img class="w120 h80"
+                                        src="https://www.th.gov.tw/epaper/uploads/epaper/y11w32/15xiwbyv.jpg" alt="">
+                                </td>
+                                <td>昭和8年臺南州祠廟名鑑</td>
+                                <td>
+                                    <p>人文記憶</p>
+                                    <p class="text-muted">文獻</p>
+                                </td>
+                                <td class="text-center">
+                                    <a href="#"><span class="material-icons">
+                                            visibility
+                                        </span></a></td>
+                            </tr>
+                            <tr class="verticalAlignMiddle">
+                                <td scope="row" class="text-success">開放</td>
+                                <td><img class="w120 h80"
+                                        src="https://i-fun-travel.com/wp-content/uploads/2020/04/7.png" alt=""></td>
+                                <td>阿里山神木群</td>
+                                <td>
+                                    <p>自然資源</p>
+                                    <p class="text-muted">位置場域</p>
+                                </td>
+                                <td class="text-center">
+                                    <a href="#"><span class="material-icons">
+                                            visibility
+                                        </span></a></td>
+                            </tr>
+                            <tr class="verticalAlignMiddle">
+                                <td scope="row" class="text-success">開放 </td>
+                                <td><img class="w120 h80"
+                                        src="https://threeonelee.com/wp-content/uploads/20210120011857_60.jpg" alt="">
+                                </td>
+                                <td>阿里山櫻花</td>
+                                <td>
+                                    <p>林業發展</p>
+                                    <p class="text-muted">影音</p>
+                                </td>
+                                <td class="text-center">
+                                    <a href="#"><span class="material-icons">
+                                            visibility
+                                        </span></a></td>
+                            </tr>
+                            <tr class="verticalAlignMiddle">
+                                <td scope="row" class="text-danger">未開放 </td>
+                                <td><img class="w120 h80" src="http://alishan.cyc.edu.tw/1996/images/map-5.gif" alt="">
+                                </td>
+                                <td>阿里山十字村口述史</td>
+                                <td>
+                                    <p>人文記憶</p>
+                                    <p class="text-muted">無形文化資產</p>
+                                </td>
+                                <td class="text-center">
+                                    <a href="#"><span class="material-icons">
+                                            visibility
+                                        </span></a></td>
+                            </tr>
+                            <tr class="verticalAlignMiddle">
+                                <td scope="row" class="text-success">開放 </td>
+                                <td><img class="w120 h80"
+                                        src="https://i-fun-travel.com/wp-content/uploads/2020/04/7.png" alt=""></td>
+                                <td>阿里山神木群</td>
+                                <td>
+                                    <p>自然資源</p>
+                                    <p class="text-muted">位置場域</p>
+                                </td>
+                                <td class="text-center">
+                                    <a href="#"><span class="material-icons">
+                                            visibility
+                                        </span></a></td>
+                            </tr>
+                            <tr class="verticalAlignMiddle">
+                                <td scope="row" class="text-success">開放 </td>
+                                <td><img class="w120 h80" src="https://www.ali-nsa.net/zh-tw/image/5861/1024x768"
+                                        alt=""></td>
+                                <td>雲潭瀑布</td>
+                                <td>
+                                    <p>自然資源</p>
+                                    <p class="text-muted">自然景觀</p>
+                                </td>
+                                <td class="text-center">
+                                    <a href="#"><span class="material-icons">
+                                            visibility
+                                        </span></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--/. 表格 -->
+                <!-- pagination -->
+                <div class="mt-4">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination d-flex justify-content-center">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- end pagination -->
+            </div>
+            <!--/. 主要內容 -->
+        </main>
+        <!-- /.右區塊 -->
+    </div>
+
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+</body>
+
+
+</html>

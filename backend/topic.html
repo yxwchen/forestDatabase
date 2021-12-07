@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阿里山林業鐵路文化資產資料庫-管理端</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../assets/scss/all.css">
+    <!-- ico -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div class="adminWrap">
+        <!-- 左側Nav -->
+        <div class="leftNav">
+            <a href="#">
+                <img src="../assets/images/adminLogo.png" alt="">
+            </a>
+            <h5 class="mt-4">綜合查詢</h5>
+            <a href="./inquire.html" class="leftNavLink">進階查詢與匯出</a>
+            <h5>數位資源管理</h5>
+            <a href="./dataList.html" class="leftNavLink">資料增修</a>
+            <h5>審核管理</h5>
+            <ul>
+                <li><a href="./reviewList.html" class="leftNavLink">資料審查</a></li>
+                <li><a href="./frontwebList.html" class="leftNavLink">前台開放</a></li>
+            </ul>
+            <h5>資料管理</h5>
+            <ul>
+                <li><a href="./synonym.html" class="leftNavLink ">同義字管理</a></li>
+                <li><a href="./authority.html" class="leftNavLink">權威檔管理</a></li>
+                <li><a href="./topic.html" class="leftNavLink active">主題管理</a></li>
+                <li><a href="./grade.html" class="leftNavLink">分級管理</a></li>
+                <li><a href="./statistics.html" class="leftNavLink">統計分析</a></li>
+            </ul>
+            <h5>系統管理</h5>
+            <a href="./accountList.html" class="leftNavLink">帳號管理</a>
+            <h5>前台管理</h5>
+            <a href="./frontwebManage.html" class="leftNavLink">前台資料管理</a>
+        </div>
+        <!-- /.左側Nav -->
+        <!-- 右區塊 -->
+        <main class="contnetWrap">
+            <!-- 標題 -->
+            <div>
+                <h4 class="pageTitle">主題管理</h4>
+            </div>
+            <!--/. 標題-->
+            <!-- 主要內容 -->
+            <div class="px-4">
+                <!-- 上方按鈕搜尋功能區 -->
+                <div class="functionBtnWrap">
+                    <a href="./addTopic.html" class="btn btn-primary" role="button">新增一筆</a>
+                </div>
+                <!--/. 上方按鈕搜尋功能區 -->
+                <!-- 表格 -->
+                <div class="mt-4">
+                    <table class="table bg-white shadow table-striped">
+                        <thead>
+                            <tr class="tableHeader">
+                                <th scope="col">名稱</th>
+                                <th scope="col">圖片</th>
+                                <th scope="col">敘述</th>
+                                <th scope="col" style="width: 50px;">修改</th>
+                                <th scope="col" style="width: 50px;">刪除</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="verticalAlignMiddle">
+                                <td scope="row">自然資源</td>
+                                <td><img class="w120 h80"
+                                        src="https://images.unsplash.com/photo-1625474756311-6820ef23e9bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                                        alt=""></td>
+                                <td>特有生態如山椒魚、螢火蟲等，關於台灣的自然生態</td>
+                                <td>
+                                    <a href="#"><span class="material-icons">
+                                            edit
+                                        </span></a></td>
+                                <td>
+                                    <a href="#">
+                                        <span class="material-icons">
+                                            delete
+                                        </span></a></td>
+                            </tr>
+                            <tr class="verticalAlignMiddle">
+                                <td scope="row">林業發展</td>
+                                <td><img class="w120 h80"
+                                        src="https://images.unsplash.com/photo-1625475096613-97b2168ddfff?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                                        alt=""></td>
+                                <td>阿里山筏木業歷史、軼事等相關紀錄</td>
+                                <td>
+                                    <a href="#"><span class="material-icons">
+                                            edit
+                                        </span></a></td>
+                                <td>
+                                    <a href="#">
+                                        <span class="material-icons">
+                                            delete
+                                        </span></a></td>
+                            </tr>
+                            <tr class="verticalAlignMiddle">
+                                <td scope="row">人文記憶</td>
+                                <td><img class="w120 h80"
+                                        src="https://images.unsplash.com/photo-1625435636445-804be9e2683d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                                        alt=""></td>
+                                <td>關於台灣特殊的人文古蹟主題，例如：淡水紅毛城、平溪天燈</td>
+                                <td>
+                                    <a href="#"><span class="material-icons">
+                                            edit
+                                        </span></a></td>
+                                <td>
+                                    <a href="#">
+                                        <span class="material-icons">
+                                            delete
+                                        </span></a></td>
+                            </tr>
+                            <tr class="verticalAlignMiddle">
+                                <td scope="row">聚落生活</td>
+                                <td><img class="w120 h80"
+                                        src="https://images.unsplash.com/photo-1625423842633-be27178d25e7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                                        alt=""></td>
+                                <td>各類水庫、溪流等相關文獻資料與數據</td>
+                                <td>
+                                    <a href="#"><span class="material-icons">
+                                            edit
+                                        </span></a></td>
+                                <td>
+                                    <a href="#">
+                                        <span class="material-icons">
+                                            delete
+                                        </span></a></td>
+                            </tr>
+                            <tr class="verticalAlignMiddle">
+                                <td scope="row">鐵道技術</td>
+                                <td><img class="w120 h80"
+                                        src="https://images.unsplash.com/photo-1567252840232-987e5e42cf64?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1604&q=80"
+                                        alt=""></td>
+                                <td>紀錄阿里山地區生態、環境、林相等資料</td>
+                                <td>
+                                    <a href="#"><span class="material-icons">
+                                            edit
+                                        </span></a></td>
+                                <td>
+                                    <a href="#">
+                                        <span class="material-icons">
+                                            delete
+                                        </span></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--/. 表格 -->
+            </div>
+            <!--/. 主要內容 -->
+        </main>
+        <!-- /.右區塊 -->
+    </div>
+
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+
+</body>
+
+
+</html>

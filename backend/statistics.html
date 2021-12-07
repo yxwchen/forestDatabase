@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阿里山林業鐵路文化資產資料庫-管理端</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../assets/scss/all.css">
+    <!-- ico -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- echart cdn -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+    <!-- date range -->
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+</head>
+
+<body>
+    <div class="adminWrap">
+        <!-- 左側Nav -->
+        <div class="leftNav shadow">
+            <a href="#">
+                <img src="../assets/images/adminLogo.png" alt="">
+            </a>
+            <h5 class="mt-4">綜合查詢</h5>
+            <a href="./inquire.html" class="leftNavLink">進階查詢與匯出</a>
+            <h5>數位資源管理</h5>
+            <a href="./dataList.html" class="leftNavLink">資料增修</a>
+            <h5>審核管理</h5>
+            <ul>
+                <li><a href="./reviewList.html" class="leftNavLink">資料審查</a></li>
+                <li><a href="./frontwebList.html" class="leftNavLink">前台開放</a></li>
+            </ul>
+            <h5>資料管理</h5>
+            <ul>
+                <li><a href="./synonym.html" class="leftNavLink">同義字管理</a></li>
+                <li><a href="./authority.html" class="leftNavLink">權威檔管理</a></li>
+                <li><a href="./topic.html" class="leftNavLink">主題管理</a></li>
+                <li><a href="./grade.html" class="leftNavLink">分級管理</a></li>
+                <li><a href="./statistics.html" class="leftNavLink active">統計分析</a></li>
+            </ul>
+            <h5>系統管理</h5>
+            <a href="./accountList.html" class="leftNavLink">帳號管理</a>
+            <h5>前台管理</h5>
+            <a href="./frontwebManage.html" class="leftNavLink">前台資料管理</a>
+        </div>
+        <!-- /.左側Nav -->
+        <!-- 右區塊 -->
+        <main class="contnetWrap">
+            <!-- 標題 -->
+            <div>
+                <h4 class="pageTitle">統計分析</h4>
+            </div>
+            <!--/. 標題 -->
+            <!-- 主要內容 -->
+            <div class="px-4">
+                <div class="functionBtnWrap">
+                    <!-- 上方條件區 -->
+                    <div class="mb-7 bg-white rounded shadow-sm">
+                        <div class="d-flex">
+                            <div class="widthHalfWrap">
+                                <h5 class="pb-2">1.請選擇要統計的種類：</h5>
+                                <div class="row g-3">
+                                    <div class="col-md-4">
+                                        <select id="inputState" class="form-select">
+                                            <option selected>分級</option>
+                                            <option value="">特級藏品</option>
+                                            <option value="">一級藏品</option>
+                                            <option value="">二級藏品</option>
+                                            <option value="">其他</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <select id="inputState" class="form-select">
+                                            <option selected>主題</option>
+                                            <option value="">自然資源</option>
+                                            <option value="">林業發展</option>
+                                            <option value="">人文記憶</option>
+                                            <option value="">聚落生活</option>
+                                            <option value="">鐵道技術</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p class="checkboxTitle"><input type="checkbox"
+                                                class="form-check-input pe-1">類型選項
+                                        </p>
+                                        <ul class="ps-2 pt-2">
+                                            <li><input type="checkbox" class="form-check-input pe-1">人文</li>
+                                            <li><input type="checkbox" class="form-check-input pe-1">器物</li>
+                                            <li><input type="checkbox" class="form-check-input pe-1">文獻</li>
+                                            <li><input type="checkbox" class="form-check-input pe-1">位置場域</li>
+                                            <li><input type="checkbox" class="form-check-input pe-1">影音</li>
+                                            <li><input type="checkbox" class="form-check-input pe-1">無形文化資產</li>
+                                            <li><input type="checkbox" class="form-check-input pe-1">自然景觀</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="widthHalfWrap">
+                                <h5 class="pb-2">2.時間範圍：</h5>
+                                <div class="row g-3">
+                                    <div class="col-md-4">
+                                        <select id="inputState" class="form-select">
+                                            <option selected>選擇時間</option>
+                                            <option value="">逐月</option>
+                                            <option value="">逐季</option>
+                                            <option value="">逐年</option>
+                                            <option value="">自訂</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input type="text" class="checkboxTitle" name="daterange"
+                                            value="01/01/2021 - 01/15/2021" />
+                                        <p class="text-muted">(此欄點選自訂時出現。)</p>
+                                    </div>
+                                </div>
+                                <h5>3.統計條件設定：</h5>
+                                <div class="row g-3">
+                                    <div class="col-md-4">
+                                        <select id="inputState" class="form-select">
+                                            <option value="" selected>筆數統計</option>
+                                            <option value="">點閱次數-前</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input type="text" class="checkboxTitle" placeholder="請輸入數字" />名
+                                    <p class="text-muted">(此欄點選點閱次數時出現。)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2 col-6 mx-auto py-4">
+                            <button class="btn btn-primary" type="button">查詢</button>
+                        </div>
+                    </div>
+                    <!--/. 上方條件區 -->
+                    <!-- 下方圖表區 -->
+                    <div>
+                        <h5>統計種類：人文、影音、自然景觀</h5>
+                        <h5>時間範圍：逐月</h5>
+                        <h5>統計條件：無</h5>
+                        <div id="chartcontainer" class="h400">
+                            <!-- 圖表顯示 -->
+                        </div>
+                    </div>
+                    <!--/. 下方圖表區 -->
+                </div>
+            </div>
+            <!--/. 主要內容 -->
+        </main>
+        <!-- /.右區塊 -->
+    </div>
+
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+    <!-- echartJS -->
+    <script type="text/javascript">
+        var dom = document.getElementById("chartcontainer");
+        var myChart = echarts.init(dom);
+        var app = {};
+
+        var option;
+
+
+
+        option = {
+            legend: {},
+            tooltip: {},
+            dataset: {
+                source: [
+                    ['product', '人文', '影音', '自然景觀'],
+                    ['1月份', 43, 85, 93],
+                    ['2月份', 83, 73, 55],
+                    ['3月份', 86, 65, 82],
+                    ['4月份', 72, 53, 39]
+                ]
+            },
+            xAxis: {
+                type: 'category'
+            },
+            yAxis: {},
+            // Declare several bar series, each will be mapped
+            // to a column of dataset.source by default.
+            series: [{
+                    type: 'bar'
+                },
+                {
+                    type: 'bar'
+                },
+                {
+                    type: 'bar'
+                }
+            ]
+        };
+
+        if (option && typeof option === 'object') {
+            myChart.setOption(option);
+        }
+    </script>
+    <!-- date range -->
+    <script>
+        $(function () {
+            $('input[name="daterange"]').daterangepicker({
+                opens: 'left'
+            }, function (start, end, label) {
+                console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' +
+                    end.format('YYYY-MM-DD'));
+            });
+        });
+    </script>
+</body>
+
+
+</html>
