@@ -5,6 +5,14 @@
 
 body {
   font-family: "Noto Sans CJK TC", "Microsoft JhengHei", PingFang, STHeiti, sans-serif, serif;
+
+
+
+}
+*:focus{
+  outline-style: dotted;
+  outline-color: red;
+  outline-width: 4px;
 }
 
 //圖片預設

@@ -12,13 +12,15 @@
     top: 0;
     z-index: 4;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    overflow-y: auto;
+
 
     h5 {
         margin-top: 20px;
         padding-left: 20px;
         font-size: 18px;
         font-weight: $font-weight-normal;
-        color: #A2ABB0;
+        color: #503a2a;
     }
 }
 
@@ -144,7 +146,7 @@
 
 //*********後台表格的header設計*************
 .tableHeader {
-    --bs-table-bg: #1EAE98;
+    --bs-table-bg: #28503C;
     --bs-table-striped-bg: #c8e3de;
     --bs-table-striped-color: #000;
     --bs-table-active-bg: #bdd7d3;

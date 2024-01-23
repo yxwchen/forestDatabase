@@ -35,6 +35,9 @@
 }
 
 //*************顏色設定***********
+.text-primary-light{
+    color: $teal;
+}
 .textForest {
     color: $forestColor;
 }
@@ -143,14 +146,15 @@
 // }
 //首頁 tag樣式
 .lineTags {
-    border: 1px solid $primary;
+    border: 1px solid $forestColorTip;
+    color:$forestColorTip;
     display: inline-block;
     padding: 2px 8px;
     margin: 2px 4px;
     border-radius: 15px;
     &:hover {
         color: $white;
-        background-color: $primary;
+        background-color:$forestColorTip;
     }
 }
 
@@ -158,5 +162,28 @@
 .aUnderline{
     text-decoration: underline !important;
 }
-
-
+// 0118新增
+// sitemap增加
+.sitemapWrap h4{
+    position: relative;
+    color:$primary;
+}
+.sitemapWrap h4:after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    left: 0;
+    bottom: -4px;
+    width: 80%;
+    background: $green;
+}
+// .card-text{
+//     color: $forestColorTip;
+// }
+//  footer 修改
+footer a{
+    color: $forestSecond;
+    &:hover{
+        color: $white;
+    }
+}
